@@ -4,6 +4,21 @@ using System.Collections.Generic;
 
 namespace ExercicioTBL
 {
+    class Program
+    {
+        static void Main()
+        {
+            var clientes = FakeDataClientes.ListaClientesFake();
+
+            foreach (var cli in clientes)
+            {
+                Console.WriteLine(cli.Nome);
+                Console.WriteLine(cli.Email);
+                Console.WriteLine(cli.Ativo);
+            }
+            Console.ReadLine();
+        }
+    }
     public static class FakeDataClientes
     {
         public static List<Usuario> ListaClientesFake()
